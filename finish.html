@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tailwind Responsive Navigation</title>
+  <link href="css/tailwind.min.css" rel="stylesheet" />
+</head>
+<body class="antialiased font-sans">
+  <nav class="bg-gray-100 p-2 mb-4 sm:h-auto sm:flex sm:items-center sm:w-full">
+    <div class="mr-8">
+      <img src="img/danvega-logo.svg" />
+    </div>
+    <ul id="nav-items" class="hidden pt-2 uppercase font-semibold sm:flex w-full">
+      <li class="m-2">
+        <a href="/" class="hover:text-blue-700 hover:underline">Home</a>
+      </li>
+      <li class="m-2">
+        <a href="/blog" class="hover:text-blue-700 hover:underline">Blog</a>
+      </li>
+      <li class="m-2">
+        <a href="/courses" class="hover:text-blue-700 hover:underline">Courses</a>
+      </li>
+      <li class="m-2">
+        <a href="/newsletter" class="hover:text-blue-700 hover:underline">Newsletter</a>
+      </li>
+      <li class="m-2">
+        <a href="/about" class="hover:text-blue-700 hover:underline">About</a>
+      </li>
+      <li class="m-2">
+        <a href="/contact" class="hover:text-blue-700 hover:underline">Contact</a>
+      </li>
+    </ul>
+    <div class="hidden sm:flex">
+      <img src="img/search.svg" class="mr-6 w-4" alt="Search" title="Search" />
+      <img src="img/moon.svg" class="mr-6 w-4" />
+    </div>
+    <div class="absolute top-0 right-0 p-4 sm:hidden">
+      <img src="img/bars.svg" class="mr-6 w-4 cursor-pointer" id="hamburger" />
+    </div>
+  </nav>
+
+  <div class="container mx-auto p-4">
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, repellat
+      vitae? Eos a quidem maxime, mollitia iure commodi magnam reprehenderit
+      molestias adipisci sapiente delectus quam exercitationem cumque? Veniam,
+      necessitatibus facere.
+    </p>
+  </div>
+
+  <script>
+    document.getElementById("hamburger").addEventListener("click", () => {
+      const navItems = document.getElementById("nav-items");
+      navItems.classList.toggle('hidden');
+      navItems.classList.toggle('block');
+    });
+  </script>
+</body>
+</html>

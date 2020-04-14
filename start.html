@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tailwind Responsive Navigation</title>
+  <link href="css/tailwind.min.css" rel="stylesheet" />
+</head>
+<body class="">
+  <nav class="">
+    <div class="">
+      <img src="img/danvega-logo.svg" />
+    </div>
+    <ul id="nav-items" class="">
+      <li class="">
+        <a href="/" class="">Home</a>
+      </li>
+      <li class="m-2">
+        <a href="/blog" class="">Blog</a>
+      </li>
+      <li class="m-2">
+        <a href="/courses" class="">Courses</a>
+      </li>
+      <li class="m-2">
+        <a href="/newsletter" class="">Newsletter</a>
+      </li>
+      <li class="m-2">
+        <a href="/about" class="">About</a>
+      </li>
+      <li class="m-2">
+        <a href="/contact" class="">Contact</a>
+      </li>
+    </ul>
+    <div class="">
+      <img src="img/search.svg" class="w-4" alt="Search" title="Search" />
+      <img src="img/moon.svg" class="w-4" />
+    </div>
+    <div class="absolute top-0 right-0 p-4 sm:hidden">
+      <img src="img/bars.svg" class="mr-6 w-4 cursor-pointer" id="hamburger" />
+    </div>
+  </nav>
+
+  <div class="">
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, repellat
+      vitae? Eos a quidem maxime, mollitia iure commodi magnam reprehenderit
+      molestias adipisci sapiente delectus quam exercitationem cumque? Veniam,
+      necessitatibus facere.
+    </p>
+  </div>
+
+  <script>
+    document.getElementById("hamburger").addEventListener("click", () => {
+      const navItems = document.getElementById("nav-items");
+      navItems.classList.toggle('hidden');
+      navItems.classList.toggle('block');
+    });
+  </script>
+</body>
+</html>
